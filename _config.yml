@@ -1,1 +1,30 @@
-theme: jekyll-theme-cayman
+# 站点 设置
+title: 个人博客
+SEOTitle: 博客 | tunkko
+header-img: img/home-bg.jpg
+keyword: "tunkko, 博客, Java, MySQL, Linux, Web, JavaScript"
+description: "书到用时方恨少，肉到肥时方恨多。"
+url: "https://tunkko.github.io"
+baseurl: ""
+
+# 侧边栏 设置
+sidebar: true
+sidebar-avatar: /img/about-BY-gentle.jpg
+
+# Build 设置
+permalink: pretty
+paginate: 10
+exclude: ["less"]
+
+# Gems 设置
+gems: [jekyll-paginate]
+
+# Markdown 设置
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+
+# Featured Tags
+featured-tags: true                     # 是否使用首页标签
+featured-condition-size: 1              # 相同标签数量大于这个数，才会出现在首页
