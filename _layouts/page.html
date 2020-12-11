@@ -17,56 +17,56 @@ layout: default
 </header>
 
 <div class="container">
-	<div class="row">
-    <!-- PostList Container -->
-    		<div class="
+    <div class="row">
+        <!-- PostList Container -->
+        <div class="
                 col-lg-8 col-lg-offset-1
                 col-md-8 col-md-offset-1
                 col-sm-12
                 col-xs-12
                 postlist-container
             ">
-    			{{ content }}
-    		</div>
-    <!-- Sidebar Container -->
-            <div class="
+            {{ content }}
+        </div>
+        <!-- Sidebar Container -->
+        <div class="
                 col-lg-3 col-lg-offset-0
                 col-md-3 col-md-offset-0
                 col-sm-12
                 col-xs-12
                 sidebar-container
             ">
-                <!-- Featured Tags -->
-                {% if site.featured-tags %}
-                <section>
-                    <hr class="hidden-sm hidden-xs">
-                    <h5><a href="{{'/tags/' | prepend: site.baseurl }}">标签</a></h5>
-                    <div class="tags">
-                        {% for tag in site.tags %}
-                            {% if tag[1].size > {{site.featured-condition-size}} %}
-                                <a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
-                                    {{ tag[0] }}
-                                </a>
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                </section>
-                {% endif %}
+            <!-- Featured Tags -->
+            {% if site.featured-tags %}
+            <section>
+                <hr class="hidden-sm hidden-xs">
+                <h5><a href="{{'/tags/' | prepend: site.baseurl }}">标签</a></h5>
+                <div class="tags">
+                    {% for tag in site.tags %}
+                    {% if tag[1].size > {{site.featured-condition-size}} %}
+                    <a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
+                        {{ tag[0] }}
+                    </a>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </section>
+            {% endif %}
 
-                <section class="visible-md visible-lg">
-                    <hr><h5><a href="{{'/about/' | prepend: site.baseurl }}">关于我</a></h5>
-                    <div class="short-about">
-                        {% if site.sidebar-avatar %}
-                            <a href="{{ site.baseurl }}/about">
-                                <img src="{{site.sidebar-avatar}}"/>
-                            </a>
-                        {% endif %}
-                        {% if site.description %}
-                            <p>{{site.description}}</p>
-                        {% endif %}
-                    </div>
-                </section>
-    		</div>
-        {% endif %}
-	</div>
+            <section class="visible-md visible-lg">
+                <hr>
+                <h5><a href="{{'/about/' | prepend: site.baseurl }}">关于我</a></h5>
+                <div class="short-about">
+                    {% if site.sidebar-avatar %}
+                    <a href="{{ site.baseurl }}/about">
+                        <img src="{{site.sidebar-avatar}}"/>
+                    </a>
+                    {% endif %}
+                    {% if site.description %}
+                    <p>{{site.description}}</p>
+                    {% endif %}
+                </div>
+            </section>
+        </div>
+    </div>
 </div>
