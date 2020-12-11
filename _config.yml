@@ -9,7 +9,7 @@ baseurl: ""
 
 # 侧边栏 设置
 sidebar: true
-sidebar-avatar: /img/about-BY-gentle.jpg
+sidebar-avatar: /img/avatar.jpg
 
 # Build 设置
 permalink: pretty
