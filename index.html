@@ -18,9 +18,7 @@ description: "思维不能克服恐惧，但行动可以克服。"
             {{ post.content | strip_html | truncate:200 }}
         </div>
     </a>
-    <p class="post-meta">
-        {{ post.date | date: "%Y-%m-%d" }}
-    </p>
+    <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
 </div>
 <hr>
 {% endfor %}
