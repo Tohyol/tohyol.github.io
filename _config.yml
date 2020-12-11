@@ -8,7 +8,6 @@ url: "https://tunkko.github.io"
 baseurl: ""
 
 # 侧边栏 设置
-sidebar: true
 sidebar-avatar: /img/avatar.jpg
 
 # Build 设置
