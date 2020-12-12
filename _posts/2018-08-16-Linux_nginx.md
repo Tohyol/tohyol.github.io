@@ -6,8 +6,10 @@ tags:
     - Nginx
 ---
 
+安装
+----
 ```
-# 安装依赖
+# 添加依赖
 yum -y install wget gcc gcc-c++ pcre-devel zlib zlib-devel openssl openssl-devel
 
 # 下载文件
@@ -20,12 +22,16 @@ tar -zxvf nginx-1.15.8.tar.gz
 # 删除文件
 rm -rf nginx-1.15.8.tar.gz
 
-# 安装文件
+# 安装
 cd nginx-1.15.8
 ./configure --with-http_ssl_module
 make
 make install
+```
 
+配置
+----
+```
 # 配置https
 server {
     listen                     80;

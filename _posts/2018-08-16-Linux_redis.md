@@ -6,6 +6,8 @@ tags:
     - Redis
 ---
 
+安装
+----
 ```
 # 安装依赖
 yum -y install wget gcc
@@ -25,9 +27,13 @@ cd redis-5.0.3
 make(make MALLOC=libc)
 cd src
 make install
+```
 
+配置
+----
+```
 # 设置密码
-cd ..
+cd /home/redis-5.0.3
 vi redis.conf
     port 6666
     daemonize yes

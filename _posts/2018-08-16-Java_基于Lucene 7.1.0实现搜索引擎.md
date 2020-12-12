@@ -6,7 +6,8 @@ tags:
     - Lucene
 ---
 
-## 引入maven依赖
+引入maven依赖
+-------------
 ``` java
 <!-- lucene -->
 <dependency>
@@ -48,7 +49,8 @@ tags:
 </dependency>
 ```
 
-## IK分词组件
+IK分词组件
+----------
 ``` java
 public class IKTokenizer extends Tokenizer {
 
@@ -125,7 +127,8 @@ public class IKTokenizer extends Tokenizer {
 }
 ```
 
-## IK分词
+IK分词
+------
 ``` java
 public class IKAnalyzer extends StopwordAnalyzerBase {
 
@@ -145,7 +148,8 @@ public class IKAnalyzer extends StopwordAnalyzerBase {
 }
 ```
 
-## 搜索纠错
+搜索纠错
+--------
 ``` java
 public class CnSpellChecker implements Closeable {
 
@@ -535,7 +539,8 @@ public class CnSpellChecker implements Closeable {
 }
 ```
 
-## Lucene
+Lucene
+------
 ``` java
 public class Lucene {
 
