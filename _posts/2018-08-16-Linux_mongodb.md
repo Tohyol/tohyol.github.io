@@ -6,8 +6,7 @@ tags:
     - MongoDB
 ---
 
-安装
-----
+## 安装
 ```
 # 添加依赖
 yum -y install wget
@@ -24,8 +23,7 @@ mv mongodb-linux-x86_64-4.0.3 mongodb
 rm -rf mongodb-linux-x86_64-4.0.3.tgz
 ```
 
-配置
-----
+## 配置
 ```
 # 创建配置文件
 cd mongodb

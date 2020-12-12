@@ -6,8 +6,7 @@ tags:
     - Redis
 ---
 
-安装
-----
+## 安装
 ```
 # 安装依赖
 yum -y install wget gcc
@@ -29,8 +28,7 @@ cd src
 make install
 ```
 
-配置
-----
+## 配置
 ```
 # 设置密码
 cd /home/redis-5.0.3

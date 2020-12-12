@@ -6,8 +6,7 @@ tags:
     - MySQL
 ---
 
-安装
-----
+## 安装
 ```
 # 添加依赖
 wget -i -c https://repo.mysql.com//mysql80-community-release-el7-1.noarch.rpm
@@ -18,8 +17,7 @@ yum -y remove mysql57-community-release-el7-10.noarch;
 rm -rf mysql57-community-release-el7-10.noarch.rpm
 ```
 
-配置
-----
+## 配置
 ```
 # 启动mysql
 systemctl start mysqld.service;

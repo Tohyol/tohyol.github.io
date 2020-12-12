@@ -6,8 +6,7 @@ tags:
     - Nginx
 ---
 
-安装
-----
+## 安装
 ```
 # 添加依赖
 yum -y install wget gcc gcc-c++ pcre-devel zlib zlib-devel openssl openssl-devel
@@ -29,8 +28,7 @@ make
 make install
 ```
 
-配置
-----
+## 配置
 ```
 # 配置https
 server {
