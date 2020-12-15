@@ -46,16 +46,22 @@ pkill -9 redis
 # 清除缓存
 # 进入redis目录
 cd redis
+
 # 连接redis
 redis-cli -h 127.0.0.1 -p 6379
+
 # 输入密码，无密码跳过
 auth 123456
+
 # 查看所有key值
 keys *
+
 # 删除指定索引的值
 del key
+
 # 清空整个 Redis 服务器的数据
 flushall
+
 # 清空当前库中的所有 key
 flushdb
 ```
