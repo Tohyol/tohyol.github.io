@@ -47,22 +47,17 @@ mysql> flush privileges;
 vi /etc/my.cnf
     # 添加(密码重置后，删除该行)
     skip-grant-tables
+
+# 重启
 systemctl restart mysqld.service;
-mysql
+
+# 登录mysql数据库，输入密码
+mysql -uroot -p
+
+# 修改密码
 mysql> use mysql;
 mysql> update user set authentication_string = password("password") where user="root";
 mysql> flush privileges;
-
-# 启动、重启、关闭命令
-
-# 启动mysql
-systemctl start mysqld.service;
-
-# 重启mysql
-systemctl restart mysqld.service;
-
-# 关闭mysql
-systemctl stop mysqld.service;
 
 # 针对5.7以上版本，sql查询高效配置(my.cnf/my.ini)
 sql-mode="NO_ENGINE_SUBSTITUTION"
