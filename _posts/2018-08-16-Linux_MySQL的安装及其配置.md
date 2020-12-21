@@ -17,7 +17,7 @@ yum -y remove mysql57-community-release-el7-10.noarch;
 rm -rf mysql57-community-release-el7-10.noarch.rpm
 ```
 
-## 配置
+## 修改密码、授权
 ```
 # 启动mysql
 systemctl start mysqld.service;
@@ -58,7 +58,10 @@ mysql -uroot -p
 mysql> use mysql;
 mysql> update user set authentication_string = password("password") where user="root";
 mysql> flush privileges;
+```
 
+## 高效配置
+```
 # 针对5.7以上版本，sql查询高效配置(my.cnf/my.ini)
 sql-mode="NO_ENGINE_SUBSTITUTION"
 
