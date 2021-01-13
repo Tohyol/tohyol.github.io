@@ -7,49 +7,51 @@ tags:
 ---
 
 ## 引入maven依赖
-``` java
-<!-- lucene -->
-<dependency>
-    <groupId>org.apache.lucene</groupId>
-    <artifactId>lucene-core</artifactId>
-    <version>7.1.0</version>
-</dependency>
-<dependency>
-    <groupId>org.apache.lucene</groupId>
-    <artifactId>lucene-analyzers-smartcn</artifactId>
-    <version>7.1.0</version>
-</dependency>
-<dependency>
-    <groupId>org.apache.lucene</groupId>
-    <artifactId>lucene-highlighter</artifactId>
-    <version>7.1.0</version>
-</dependency>
-<dependency>
-    <groupId>org.apache.lucene</groupId>
-    <artifactId>lucene-backward-codecs</artifactId>
-    <version>7.1.0</version>
-</dependency>
-<dependency>
-    <groupId>org.apache.lucene</groupId>
-    <artifactId>lucene-suggest</artifactId>
-    <version>7.1.0</version>
-</dependency>
-<dependency>
-    <groupId>org.apache.lucene</groupId>
-    <artifactId>lucene-queryparser</artifactId>
-    <version>7.1.0</version>
-</dependency>
-
-<!-- ikanalyzer -->
-<dependency>
-    <groupId>com.janeluo</groupId>
-    <artifactId>ikanalyzer</artifactId>
-    <version>2012_u6</version>
-</dependency>
+```xml
+<dependencies>
+    <!-- lucene -->
+    <dependency>
+        <groupId>org.apache.lucene</groupId>
+        <artifactId>lucene-core</artifactId>
+        <version>7.1.0</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.lucene</groupId>
+        <artifactId>lucene-analyzers-smartcn</artifactId>
+        <version>7.1.0</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.lucene</groupId>
+        <artifactId>lucene-highlighter</artifactId>
+        <version>7.1.0</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.lucene</groupId>
+        <artifactId>lucene-backward-codecs</artifactId>
+        <version>7.1.0</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.lucene</groupId>
+        <artifactId>lucene-suggest</artifactId>
+        <version>7.1.0</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.lucene</groupId>
+        <artifactId>lucene-queryparser</artifactId>
+        <version>7.1.0</version>
+    </dependency>
+    
+    <!-- ikanalyzer -->
+    <dependency>
+        <groupId>com.janeluo</groupId>
+        <artifactId>ikanalyzer</artifactId>
+        <version>2012_u6</version>
+    </dependency>
+</dependencies>
 ```
 
 ## IK分词组件
-``` java
+```java
 public class IKTokenizer extends Tokenizer {
 
     /**
@@ -126,7 +128,7 @@ public class IKTokenizer extends Tokenizer {
 ```
 
 ## IK分词
-``` java
+```java
 public class IKAnalyzer extends StopwordAnalyzerBase {
 
     @Override
@@ -146,7 +148,7 @@ public class IKAnalyzer extends StopwordAnalyzerBase {
 ```
 
 ## 搜索纠错
-``` java
+```java
 public class CnSpellChecker implements Closeable {
 
     private Directory spellIndex;
@@ -536,7 +538,7 @@ public class CnSpellChecker implements Closeable {
 ```
 
 ## Lucene
-``` java
+```java
 public class Lucene {
 
     /**
