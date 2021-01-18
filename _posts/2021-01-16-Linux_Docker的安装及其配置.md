@@ -52,6 +52,9 @@ systemctl restart docker
 # 关闭服务
 systemctl stop docker
 
+# 搜索可用镜像
+docker search <image>
+
 # 拉取及安装容器
 docker pull <image>
 docker run -d -p 9000:9000 --name <name> --restart=always -v /home/data:/opt/data
