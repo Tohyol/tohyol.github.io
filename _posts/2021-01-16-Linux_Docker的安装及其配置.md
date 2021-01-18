@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "【Linux】Docker的安装及其配置"
+title:      "Docker的安装及其配置"
 tags:
     - Linux
     - Docker
@@ -54,15 +54,14 @@ systemctl stop docker
 
 # 拉取及安装容器
 docker pull <image>
-docker run -d -p 9000:9000 --name <name> --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /home/data:/opt/data <image>/<image>
+docker run -d -p 9000:9000 --name <name> --restart=always -v /home/data:/opt/data
 
 参数说明：
 -d：容器在后台运行
 -p 9000:9000：宿主机9000端口映射容器中的9000端口
 --name：名称
 --restart=always：自启动
--v /var/run/docker.sock:/var/run/docker.sock：添加到Docker的守护进程中
--v /home/data:/opt/data： 宿主机/home/data映射容器/opt/data
+-v /home/data:/opt/data： 主机地址(/home/data)映射容器地址(/opt/data)
 
 # 查看已下载镜像
 docker images
