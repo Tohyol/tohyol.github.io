@@ -58,10 +58,11 @@ services:
   portainer:
     container_name: portainer
     image: portainer/portainer
+    restart: always
     ports:
       - 9000:9000
     volumes:
-      - /var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock
   mysql:
     container_name: mysql
     image: mysql:latest
