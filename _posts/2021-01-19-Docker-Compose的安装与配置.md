@@ -62,6 +62,14 @@ services:
       - 9000:9000
     volumes:
       - /var/run/docker.sock
+  mysql:
+    container_name: mysql
+    image: mysql:latest
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
   redis:
     container_name: redis
     image: redis:latest
@@ -107,7 +115,7 @@ expose：暴露端口，但不映射到宿主机，只允许能被连接的服�
 depends_on：用于解决容器的依赖、启动先后的问题
 links：链接到其它服务中的容器
 volumes：挂载一个目录或者一个已存在的数据卷容器
-
+environment：添加环境系统配置
 ```
 
 ## 卸载
