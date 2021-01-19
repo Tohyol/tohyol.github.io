@@ -86,6 +86,7 @@ services:
     expose:
       - 8080
     depends_on:
+      - mysql
       - redis
     volumes:
       - /home/docker/tomcat/webapps:/usr/local/tomcat/webapps/
