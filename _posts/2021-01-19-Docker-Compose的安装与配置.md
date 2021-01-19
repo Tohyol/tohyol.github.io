@@ -68,6 +68,8 @@ services:
     restart: always
     ports:
       - 3306:3306
+    volumes:
+      - /home/docker/mysql/logs:/var/log/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=123456
   redis:
@@ -77,7 +79,7 @@ services:
     expose:
       - 80
     volumes:
-      - /home/docker/redis/conf/redis.conf:/usr/local/etc/redis/redis.conf
+      - /home/docker/redis/conf:/usr/local/etc/redis
       - /home/docker/redis/logs:/logs
   tomcat:
     container_name: tomcat
@@ -89,8 +91,8 @@ services:
       - mysql
       - redis
     volumes:
-      - /home/docker/tomcat/webapps:/usr/local/tomcat/webapps/
-      - /home/docker/tomcat/logs:/usr/local/tomcat/logs/
+      - /home/docker/tomcat/webapps:/usr/local/tomcat/webapps
+      - /home/docker/tomcat/logs:/usr/local/tomcat/logs
   nginx:
     container_name: nginx
     image: nginx:latest
@@ -103,7 +105,7 @@ services:
       - tomcat
     volumes:
       - /home/docker/nginx/conf:/etc/nginx/conf.d
-      - /home/docker/nginx/log:/var/log/nginx
+      - /home/docker/nginx/logs:/var/log/nginx
     environment:
       - TZ=Asia/Shanghai
 
