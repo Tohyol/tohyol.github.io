@@ -82,6 +82,17 @@ services:
     volumes:
       - /home/docker/redis/conf:/usr/local/etc/redis
       - /home/docker/redis/logs:/logs
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3.8.9-management
+    restart: always
+    ports:
+      - 15672:15672
+    expose:
+      - 5672
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=admin
   tomcat:
     container_name: tomcat
     image: tomcat:latest
@@ -91,6 +102,7 @@ services:
     depends_on:
       - mysql
       - redis
+      - rabbitmq
     volumes:
       - /home/docker/tomcat/webapps:/usr/local/tomcat/webapps
       - /home/docker/tomcat/logs:/usr/local/tomcat/logs
@@ -113,6 +125,8 @@ services:
 参数说明：
 container_name：自定义容器命名
 image：指定服务的镜像名称或镜像ID，如果镜像在本地不存在，Compose将会尝试拉取镜像
+restart:always：docker重启时，容器自动启动
+privileged：是否让docker容器获取宿主机root权限
 commond：覆盖容器启动后默认执行的命令
 ports：用于映射端口
 expose：暴露端口，但不映射到宿主机，只允许能被连接的服务访问
