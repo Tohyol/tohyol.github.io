@@ -1,10 +1,10 @@
 # 站点 设置
 title: 个人博客
-SEOTitle: 博客 | tunkko
+SEOTitle: 博客 | Tohyol
 header-img: img/home-bg.jpg
 keyword: "tunkko, 博客, Java, MySQL, Linux, Web, JavaScript"
 description: "书到用时方恨少，肉到肥时方恨多。"
-url: "https://tunkko.github.io"
+url: "https://tohyol.github.io"
 baseurl: ""
 
 # 侧边栏 设置
