@@ -1,10 +1,10 @@
 # 站点 设置
 title: 个人博客
-SEOTitle: 博客 | Tohyol
+SEOTitle: 博客 | Lioxy
 header-img: img/home-bg.jpg
-keyword: "Tohyol, 博客, Java, MySQL, Linux, Web, JavaScript"
+keyword: "Lioxy, Java, MySQL, Linux, Docker, Redis, Nginx, Mongo, JavaScript"
 description: "书到用时方恨少，肉到肥时方恨多。"
-url: "https://tohyol.github.io"
+url: "https://lioxy.github.io"
 baseurl: ""
 
 # 侧边栏 设置
