@@ -1,10 +1,10 @@
 # 站点 设置
 title: 个人博客
-SEOTitle: 博客 | Lioxy
+SEOTitle: 博客 | Syketa
 header-img: img/home-bg.jpg
-keyword: "Lioxy, Java, MySQL, Linux, Docker, Redis, Nginx, Mongo, JavaScript"
+keyword: "Java, MySQL, Linux, Docker, Redis, Nginx, Mongo, JavaScript"
 description: "书到用时方恨少，肉到肥时方恨多。"
-url: "https://lioxy.github.io"
+url: "https://syketa.github.io"
 baseurl: ""
 
 # 侧边栏 设置
