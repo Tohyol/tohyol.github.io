@@ -5,6 +5,8 @@ header-img: img/home-bg.jpg
 keyword: "Java, MySQL, Linux, Docker, Redis, Nginx, Mongo, JavaScript"
 description: "书到用时方恨少，肉到肥时方恨多。"
 
+baseurl: ""
+
 # 侧边栏 设置
 sidebar-avatar: /img/avatar.jpg
 
